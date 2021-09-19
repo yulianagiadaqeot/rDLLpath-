@@ -1,0 +1,82 @@
+#cs ----------------------------------------------------------------------------
+
+ AutoIt Version: 3.3.14.5
+ Author:         Skysnake
+
+ Script Function:
+    Display content of DLL icon files
+
+#ce ----------------------------------------------------------------------------
+
+; Script Start - Add your code below here
+
+#include <ButtonConstants.au3>
+#include <GUIConstantsEx.au3>
+
+;Local $rDLLpath = @SystemDir & "\Wmploc.dll"
+;Local $rDLLpath = @SystemDir & "\imageres.dll"
+;Local $rDLLpath = @SystemDir & "\shell32.dll"
+;Local $rDLLpath = @SystemDir & "\pifmgr.dll"
+;Local $rDLLpath = @SystemDir & "\explorer.exe"
+;Local $rDLLpath = @SystemDir & "\accessibilitycpl.dll"
+;Local $rDLLpath = @SystemDir & "\ddores.dll"
+;Local $rDLLpath = @SystemDir & "\moricons.dll" ; ugly do not use
+;Local $rDLLpath = @SystemDir & "\mmcndmgr.dll
+;Local $rDLLpath = @SystemDir & "\netshell.dll"
+;Local $rDLLpath = @SystemDir & "\ieframe.dll"
+Local $rDLLpath = @SystemDir & "\wiashext.dll"
+
+For $r = 0 To -50 Step -10
+    ConsoleWrite($r & @CRLF)
+    GUICreate("Show Icons")
+
+    Local $lblShowRange = GUICtrlCreateLabel("Icons " & $r - 1 & " to " & $r - 10, 8, 8, 100, 25)
+
+    Local $btnIcon1 = GUICtrlCreateButton("", 8, 25, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon1, $rDLLpath, $r - 1, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 1, 40, 25, 24, 24)
+
+    ; 2nd
+    Local $btnIcon2 = GUICtrlCreateButton("", 8, 50, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon2, $rDLLpath, $r - 2, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 2, 40, 50, 24, 24)
+
+    ; 3rd
+    Local $btnIcon3 = GUICtrlCreateButton("", 8, 75, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon3, $rDLLpath, $r - 3, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 3, 40, 75, 24, 24)
+
+    ;4th
+    Local $btnIcon4 = GUICtrlCreateButton("", 8, 100, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon4, $rDLLpath, $r - 4, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 4, 40, 100, 24, 24)
+
+    ;5th
+    Local $btnIcon5 = GUICtrlCreateButton("", 8, 125, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon5, $rDLLpath, $r - 5, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 5, 40, 125, 24, 24)
+
+    ;6th
+    Local $btnIcon6 = GUICtrlCreateButton("", 8, 150, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon6, $rDLLpath, $r - 6, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 6, 40, 150, 24, 24)
+
+    ;7th
+    Local $btnIcon7 = GUICtrlCreateButton("", 8, 175, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon7, $rDLLpath, $r - 7, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 7, 40, 175, 24, 24)
+
+    ;8th
+    Local $btnIcon8 = GUICtrlCreateButton("", 8, 200, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon8, $rDLLpath, $r - 8, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 8, 40, 200, 24, 24)
+
+    ;9th
+    Local $btnIcon9 = GUICtrlCreateButton("", 8, 225, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon9, $rDLLpath, $r - 9, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 9, 40, 225, 24, 24)
+
+    ;10th
+    Local $btnIcon10 = GUICtrlCreateButton("", 8, 250, 24, 24, $BS_ICON)
+    GUICtrlSetImage($btnIcon10, $rDLLpath, $r - 10, 0)    ;
+    GUICtrlCreateIcon($rDLLpath, $r - 10, 40, 250, 24, 24)
